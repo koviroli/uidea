@@ -27,7 +27,7 @@ namespace UIdea
         {
             TableRow rowIdea = new TableRow();
             rowIdea.CssClass = "default";
-            rowIdea.Cells.Add(new TableCell() { Text = idea.Title });
+            rowIdea.Cells.Add(new TableCell() { Text = idea.Title, Width = new Unit("50%") });
 
             TableCell cellRquiredMembers = new TableCell();
             foreach(var member in idea.RequiredMembers.Split(';'))
@@ -48,20 +48,54 @@ namespace UIdea
                         break;
                 }
             }
+            cellRquiredMembers.Width = new Unit("20%");
             rowIdea.Cells.Add(cellRquiredMembers);
 
-            rowIdea.Cells.Add(new TableCell() { Text = !idea.Open ? "Closed" : "Open" });
+            TableCell progressBar = new TableCell();
+            progressBar.Width = new Unit("20%");
+            progressBar.Controls.Add(ProgressBar(20));
+
+            rowIdea.Cells.Add(progressBar);
 
             TableCell btnCell = new TableCell();
+            btnCell.Width = new Unit("10%");
             string btnClass = "btn btn-success btn-xs";
             if(!idea.Open)
             {
                 btnClass += " disabled";
             }
-            btnCell.Controls.Add(new Button() { CssClass = btnClass, Text = "Join" });
+            Button btnJoin = new Button()
+            {
+                CssClass = btnClass,
+                Text = "Join"
+            };
+            btnCell.Controls.Add(btnJoin);
             rowIdea.Cells.Add(btnCell);
-
             tblIdeas.Rows.Add(rowIdea);//add the new row to table
+        }
+
+        private HtmlGenericControl ProgressBar(int percent)
+        {
+            //< div class="progress">
+            //<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            //<span class="sr-only">70% Complete</span>
+            //</div>
+            //</div>
+
+            HtmlGenericControl mainDiv = new HtmlGenericControl("div");
+            mainDiv.Attributes.Add("class", "progress");
+
+            HtmlGenericControl progressBarDiv = new HtmlGenericControl("div");
+            progressBarDiv.Attributes.Add("class", "progress-bar");
+            progressBarDiv.Attributes.Add("role", "progressbar");
+            progressBarDiv.Attributes.Add("aria-valuenow", string.Format("{0}", percent));
+            progressBarDiv.Attributes.Add("aria-valuemin", "0");
+            progressBarDiv.Attributes.Add("aria-valuemax", "100");
+            progressBarDiv.Style.Add(HtmlTextWriterStyle.Width, string.Format("{0}%", percent));
+            mainDiv.Controls.Add(progressBarDiv);
+
+
+            return mainDiv;
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -91,21 +125,6 @@ namespace UIdea
         protected void btnAddRow_Click(object sender, EventArgs e)
         {
             Response.Redirect("NewIdea.aspx");
-
-            //var idea = new Idea()
-            //{
-            //    Title = "TestIdea",
-            //    Description = "Some test description",
-            //    RequiredMembers = "coder,sales",
-            //    Open = true,
-            //};
-            //using (var _db = new IdeaContext())
-            //{
-            //    _db.Ideas.Add(idea);
-            //    _db.SaveChanges();
-            //}
-            //AddIdeaRow(idea);
-            //AddIdeaToDB(IdeaTitleTest, "Some Description", reqMembers, isOpen);
         }
     }
 }
