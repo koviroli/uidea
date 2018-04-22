@@ -64,7 +64,7 @@ namespace UIdea.Ideas
             {
                 Title = tbTitle.Text,
                 Description = tbDescription.Text,
-                Open = true,
+                IsOpen = true,
                 RequiredMembers = requiredMembers,
                 UserID = userId
             };

@@ -20,31 +20,31 @@ namespace UIdea.Models
             {
                 new Idea
                 {
-                    Title = "Celver home",
+                    Title = "Celvr home",
                     Description = "Allows you to control devices in your home.",
                     RequiredMembers = "coder;designer;engineer",
-                    Open = true
+                    IsOpen = true
                 },
                 new Idea
                 {
                     Title = "Self driving drone",
                     Description = "AI driver done",
                     RequiredMembers = "coder;designer;engineer,sales",
-                    Open = true
+                    IsOpen = true
                 },
                 new Idea
                 {
                     Title = "Home selling website",
                     Description = "A new way of selling homes",
                     RequiredMembers = "coder",
-                    Open = false
+                    IsOpen = false
                 },
                 new Idea
                 {
                     Title = "Democraty Social Network",
                     Description = "A social network that envolving by it's users",
                     RequiredMembers = "coder;designer",
-                    Open = true
+                    IsOpen = true
                 }
             };
             return ideas;

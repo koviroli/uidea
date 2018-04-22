@@ -19,6 +19,6 @@ namespace UIdea.Models
 
         public string RequiredMembers { get; set; }
 
-        public bool Open { get; set; }
+        public bool IsOpen { get; set; }
     }
 }

@@ -60,7 +60,7 @@ namespace UIdea
             TableCell btnCell = new TableCell();
             btnCell.Width = new Unit("10%");
             string btnClass = "btn btn-success btn-xs";
-            if(!idea.Open)
+            if(!idea.IsOpen)
             {
                 btnClass += " disabled";
             }
@@ -100,7 +100,7 @@ namespace UIdea
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var _db = new Models.IdeaContext())
+            using (var _db = new IdeaContext())
             {
                 _db.Database.Initialize(true);
                 IQueryable<Models.Idea> query = _db.Ideas;

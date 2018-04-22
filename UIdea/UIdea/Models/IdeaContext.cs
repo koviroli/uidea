@@ -9,7 +9,7 @@ namespace UIdea.Models
 {
     public class IdeaContext : DbContext
     {
-        public IdeaContext() : base("Ideas")
+        public IdeaContext() : base("DefaultConnection")
         {
         }
 
