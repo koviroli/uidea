@@ -20,6 +20,8 @@ namespace UIdea
             {
                 _db.Database.Initialize(true);
                 IQueryable<ApplicationUser> queryUsers = _db.Users;
+                var usersCount = queryUsers.Count();
+                lblUsersCount.Text = string.Format("There are {0} registered users.", usersCount);
                 foreach (var user in queryUsers)
                 {
                     
