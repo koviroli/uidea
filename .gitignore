@@ -1,417 +1,329 @@
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net20/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/Newtonsoft.Json.6.0.4.nupkg
-UIdea/packages/Modernizr.2.6.2/Tools/uninstall.ps1
-UIdea/packages/Modernizr.2.6.2/Tools/install.ps1
-UIdea/packages/Modernizr.2.6.2/Tools/common.ps1
-UIdea/packages/Modernizr.2.6.2/Modernizr.2.6.2.nupkg
-UIdea/packages/Modernizr.2.6.2/Content/Scripts/modernizr-2.6.2.js
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/tools/VS.psm1
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/tools/VS.psd1
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/tools/Uninstall.ps1
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/tools/Install.ps1
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/lib/net40/Microsoft.Web.Infrastructure.dll
-UIdea/packages/Microsoft.Web.Infrastructure.1.0.0.0/Microsoft.Web.Infrastructure.1.0.0.0.nupkg
-UIdea/packages/Microsoft.Owin.Security.Twitter.3.0.1/lib/net45/Microsoft.Owin.Security.Twitter.dll
-UIdea/packages/Microsoft.Owin.Security.Twitter.3.0.1/lib/net45/Microsoft.Owin.Security.Twitter.XML
-UIdea/packages/Microsoft.Owin.Security.Twitter.3.0.1/Microsoft.Owin.Security.Twitter.3.0.1.nupkg
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.IO.Compression.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Diagnostics.StackTrace.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Diagnostics.Process.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Diagnostics.FileVersionInfo.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Console.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Collections.Immutable.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.AppContext.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.Win32.Primitives.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.VisualBasic.Core.targets
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.DiaSymReader.Native.x86.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.DiaSymReader.Native.amd64.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CodeAnalysis.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CodeAnalysis.VisualBasic.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CodeAnalysis.Scripting.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CodeAnalysis.CSharp.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CodeAnalysis.CSharp.Scripting.dll
-UIdea/packages/Microsoft.AspNet.Identity.EntityFramework.2.2.1/lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll
-UIdea/packages/Microsoft.AspNet.Identity.EntityFramework.2.2.1/Microsoft.AspNet.Identity.EntityFramework.2.2.1.nupkg
-UIdea/packages/Microsoft.AspNet.Identity.Core.2.2.1/lib/net45/Microsoft.AspNet.Identity.Core.xml
-UIdea/packages/Microsoft.AspNet.Identity.Core.2.2.1/lib/net45/Microsoft.AspNet.Identity.Core.dll
-UIdea/packages/Microsoft.AspNet.Identity.Core.2.2.1/Microsoft.AspNet.Identity.Core.2.2.1.nupkg
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/lib/net45/Microsoft.AspNet.FriendlyUrls.xml
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/lib/net45/Microsoft.AspNet.FriendlyUrls.dll
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/lib/net40/Microsoft.AspNet.FriendlyUrls.xml
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/lib/net40/Microsoft.AspNet.FriendlyUrls.dll
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.Core.1.0.2/Microsoft.AspNet.FriendlyUrls.Core.1.0.2.nupkg
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/readme.txt
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Microsoft.AspNet.FriendlyUrls.1.0.2.nupkg
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/ViewSwitcher.ascx.pp
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/ViewSwitcher.ascx.designer.cs.pp
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/ViewSwitcher.ascx.cs.pp
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/Site.Mobile.Master.pp
-UIdea/.vs/config/applicationhost.config
-UIdea/.vs/UIdea/v15/Server/sqlite3/storage.ide-wal
-UIdea/.vs/UIdea/v15/Server/sqlite3/storage.ide-shm
-UIdea/.vs/UIdea/v15/Server/sqlite3/storage.ide
-UIdea/.vs/UIdea/v15/Server/sqlite3/db.lock
-UIdea/.vs/UIdea/v15/.suo
-UIdea/packages/Owin.1.0/lib/net40/Owin.dll
-UIdea/packages/Owin.1.0/Owin.1.0.nupkg
-UIdea/packages/Newtonsoft.Json.6.0.4/tools/install.ps1
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/portable-net45%2Bwp80%2Bwin8%2Bwpa81/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/portable-net45%2Bwp80%2Bwin8%2Bwpa81/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/portable-net40%2Bsl5%2Bwp80%2Bwin8%2Bwpa81/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/portable-net40%2Bsl5%2Bwp80%2Bwin8%2Bwpa81/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/netcore45/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/netcore45/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net45/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net45/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net40/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net40/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net35/Newtonsoft.Json.xml
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net35/Newtonsoft.Json.dll
-UIdea/packages/Newtonsoft.Json.6.0.4/lib/net20/Newtonsoft.Json.xml
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Xml.ReaderWriter.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.ValueTuple.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Threading.Thread.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Text.Encoding.CodePages.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Principal.Windows.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Cryptography.X509Certificates.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Cryptography.Primitives.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Cryptography.Encoding.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Cryptography.Algorithms.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.Claims.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Security.AccessControl.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Reflection.Metadata.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.IO.Pipes.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.IO.FileSystem.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.IO.FileSystem.Primitives.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.IO.FileSystem.DriveInfo.dll
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/Site.Mobile.Master.designer.cs.pp
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/Site.Mobile.Master.cs.pp
-UIdea/packages/Microsoft.AspNet.FriendlyUrls.1.0.2/Content/App_Start/RouteConfig.cs.pp
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/lib/net45/Microsoft.AI.ServerTelemetryChannel.dll
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/lib/net45/Microsoft.AI.ServerTelemetryChannel.XML
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/lib/net40/Microsoft.AI.ServerTelemetryChannel.dll
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/lib/net40/Microsoft.AI.ServerTelemetryChannel.XML
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/content/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/content/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/content/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0/Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/lib/net45/Microsoft.AI.WindowsServer.dll
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/lib/net45/Microsoft.AI.WindowsServer.XML
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/lib/net40/Microsoft.AI.WindowsServer.dll
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/lib/net40/Microsoft.AI.WindowsServer.XML
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/content/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.Owin.Security.OAuth.3.0.1/lib/net45/Microsoft.Owin.Security.OAuth.dll
-UIdea/packages/Microsoft.Owin.Security.OAuth.3.0.1/lib/net45/Microsoft.Owin.Security.OAuth.XML
-UIdea/packages/Microsoft.Owin.Security.OAuth.3.0.1/Microsoft.Owin.Security.OAuth.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Security.MicrosoftAccount.3.0.1/lib/net45/Microsoft.Owin.Security.MicrosoftAccount.dll
-UIdea/packages/Microsoft.Owin.Security.MicrosoftAccount.3.0.1/lib/net45/Microsoft.Owin.Security.MicrosoftAccount.XML
-UIdea/packages/Microsoft.Owin.Security.MicrosoftAccount.3.0.1/Microsoft.Owin.Security.MicrosoftAccount.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Security.Google.3.0.1/lib/net45/Microsoft.Owin.Security.Google.dll
-UIdea/packages/Microsoft.Owin.Security.Google.3.0.1/lib/net45/Microsoft.Owin.Security.Google.XML
-UIdea/packages/Microsoft.Owin.Security.Google.3.0.1/Microsoft.Owin.Security.Google.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Security.Facebook.3.0.1/lib/net45/Microsoft.Owin.Security.Facebook.dll
-UIdea/packages/Microsoft.Owin.Security.Facebook.3.0.1/lib/net45/Microsoft.Owin.Security.Facebook.XML
-UIdea/packages/Microsoft.Owin.Security.Facebook.3.0.1/Microsoft.Owin.Security.Facebook.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Security.Cookies.3.0.1/lib/net45/Microsoft.Owin.Security.Cookies.xml
-UIdea/packages/Microsoft.Owin.Security.Cookies.3.0.1/lib/net45/Microsoft.Owin.Security.Cookies.dll
-UIdea/packages/Microsoft.Owin.Security.Cookies.3.0.1/Microsoft.Owin.Security.Cookies.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Security.3.0.1/lib/net45/Microsoft.Owin.Security.dll
-UIdea/packages/Microsoft.Owin.Security.3.0.1/lib/net45/Microsoft.Owin.Security.XML
-UIdea/packages/Microsoft.Owin.Security.3.0.1/Microsoft.Owin.Security.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.Host.SystemWeb.3.0.1/lib/net45/Microsoft.Owin.Host.SystemWeb.xml
-UIdea/packages/Microsoft.Owin.Host.SystemWeb.3.0.1/lib/net45/Microsoft.Owin.Host.SystemWeb.dll
-UIdea/packages/Microsoft.Owin.Host.SystemWeb.3.0.1/Microsoft.Owin.Host.SystemWeb.3.0.1.nupkg
-UIdea/packages/Microsoft.Owin.3.0.1/lib/net45/Microsoft.Owin.dll
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjax.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0.nupkg
-UIdea/packages/Microsoft.AspNet.Providers.Core.2.0.0/lib/net40/System.Web.Providers.xml
-UIdea/packages/Microsoft.AspNet.Providers.Core.2.0.0/lib/net40/System.Web.Providers.dll
-UIdea/packages/Microsoft.AspNet.Providers.Core.2.0.0/ReadMe.txt
-UIdea/packages/Microsoft.AspNet.Providers.Core.2.0.0/Microsoft.AspNet.Providers.Core.2.0.0.nupkg
-UIdea/packages/Microsoft.AspNet.Identity.Owin.2.2.1/lib/net45/Microsoft.AspNet.Identity.Owin.xml
-UIdea/packages/Microsoft.AspNet.Identity.Owin.2.2.1/lib/net45/Microsoft.AspNet.Identity.Owin.dll
-UIdea/packages/Microsoft.AspNet.Identity.Owin.2.2.1/Microsoft.AspNet.Identity.Owin.2.2.1.nupkg
-UIdea/packages/Microsoft.AspNet.Identity.EntityFramework.2.2.1/lib/net45/Microsoft.AspNet.Identity.EntityFramework.xml
-UIdea/packages/AspNet.ScriptManager.bootstrap.3.0.0/lib/net45/AspNet.ScriptManager.bootstrap.dll
-UIdea/packages/AspNet.ScriptManager.bootstrap.3.0.0/lib/net40/AspNet.ScriptManager.bootstrap.dll
-UIdea/packages/AspNet.ScriptManager.bootstrap.3.0.0/AspNet.ScriptManager.bootstrap.3.0.0.nupkg
-UIdea/packages/Antlr.3.4.1.9004/lib/Antlr3.Runtime.pdb
-UIdea/packages/Antlr.3.4.1.9004/lib/Antlr3.Runtime.dll
-UIdea/packages/Antlr.3.4.1.9004/Antlr.3.4.1.9004.nupkg
-UIdea/packages/jQuery.1.10.2/Content/Scripts/jquery-1.10.2-vsdoc.js
-UIdea/packages/bootstrap.3.0.0/content/fonts/glyphicons-halflings-regular.woff
-UIdea/packages/bootstrap.3.0.0/content/fonts/glyphicons-halflings-regular.ttf
-UIdea/packages/bootstrap.3.0.0/content/fonts/glyphicons-halflings-regular.svg
-UIdea/packages/bootstrap.3.0.0/content/fonts/glyphicons-halflings-regular.eot
-UIdea/packages/bootstrap.3.0.0/content/Scripts/bootstrap.min.js
-UIdea/packages/bootstrap.3.0.0/content/Scripts/bootstrap.js
-UIdea/packages/bootstrap.3.0.0/content/Content/bootstrap.min.css
-UIdea/packages/bootstrap.3.0.0/content/Content/bootstrap.css
-UIdea/packages/bootstrap.3.0.0/bootstrap.3.0.0.nupkg
-UIdea/packages/WebGrease.1.5.2/tools/WG.exe
-UIdea/packages/WebGrease.1.5.2/lib/WebGrease.dll
-UIdea/packages/WebGrease.1.5.2/WebGrease.1.5.2.nupkg
-UIdea/packages/Respond.1.2.0/content/Scripts/respond.min.js
-UIdea/packages/Respond.1.2.0/content/Scripts/respond.js
-UIdea/packages/Respond.1.2.0/Respond.1.2.0.nupkg
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.CSharp.Core.targets
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/Microsoft.Build.Tasks.CodeAnalysis.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/build/Microsoft.Net.Compilers.props
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/ThirdPartyNotices.rtf
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/Microsoft.Net.Compilers.2.1.0.nupkg
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/tools/net45/uninstall.ps1
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/tools/net45/install.ps1
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/lib/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/lib/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/content/net46/web.config.uninstall.xdt
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/content/net46/web.config.install.xdt
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/content/net45/web.config.uninstall.xdt
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/content/net45/web.config.install.xdt
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/build/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props
-UIdea/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7.nupkg
-UIdea/packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/lib/net45/Microsoft.AspNet.Web.Optimization.WebForms.dll
-UIdea/packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/content/web.config.transform
-UIdea/packages/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3/Microsoft.AspNet.Web.Optimization.WebForms.1.1.3.nupkg
-UIdea/packages/Microsoft.AspNet.Web.Optimization.1.1.3/lib/net40/system.web.optimization.xml
-UIdea/packages/Microsoft.AspNet.Web.Optimization.1.1.3/lib/net40/System.Web.Optimization.dll
-UIdea/packages/Microsoft.AspNet.Web.Optimization.1.1.3/Microsoft.AspNet.Web.Optimization.1.1.3.nupkg
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/lib/net45/Microsoft.ScriptManager.WebForms.dll
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/lib/net40/Microsoft.AI.Web.XML
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net45/web.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net45/web.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net45/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net45/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net45/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net40/web.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net40/web.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net40/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net40/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/content/net40/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/Microsoft.ApplicationInsights.Web.2.2.0.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/lib/net45/Microsoft.AI.PerfCounterCollector.dll
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/lib/net40/Microsoft.AI.PerfCounterCollector.dll
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/content/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/content/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/content/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0/Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/lib/net45/Microsoft.AI.DependencyCollector.dll
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/lib/net45/Microsoft.AI.DependencyCollector.XML
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/lib/net40/Microsoft.AI.DependencyCollector.dll
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/lib/net40/Microsoft.AI.DependencyCollector.XML
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/content/ApplicationInsights.config.uninstall.xdt
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/content/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/content/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.DependencyCollector.2.2.0/Microsoft.ApplicationInsights.DependencyCollector.2.2.0.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.Agent.Intercept.2.0.6/lib/net45/Microsoft.AI.Agent.Intercept.dll
-UIdea/packages/Microsoft.ApplicationInsights.Agent.Intercept.2.0.6/lib/net40/Microsoft.AI.Agent.Intercept.dll
-UIdea/packages/Microsoft.ApplicationInsights.Agent.Intercept.2.0.6/Microsoft.ApplicationInsights.Agent.Intercept.2.0.6.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/wp8/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/uap10.0/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/portable-win81%2Bwpa81/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/netstandard1.5/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/netstandard1.5/Microsoft.ApplicationInsights.XML
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net46/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net46/Microsoft.ApplicationInsights.XML
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net45/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net45/Microsoft.ApplicationInsights.XML
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net40/Microsoft.ApplicationInsights.dll
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/lib/net40/Microsoft.ApplicationInsights.XML
-UIdea/packages/Microsoft.ApplicationInsights.2.2.0/Microsoft.ApplicationInsights.2.2.0.nupkg
-UIdea/packages/EntityFramework.6.1.3/tools/migrate.exe
-UIdea/packages/EntityFramework.6.1.3/tools/install.ps1
-UIdea/packages/EntityFramework.6.1.3/tools/init.ps1
-UIdea/packages/EntityFramework.6.1.3/tools/about_EntityFramework.help.txt
-UIdea/packages/EntityFramework.6.1.3/tools/EntityFramework.psm1
-UIdea/packages/EntityFramework.6.1.3/tools/EntityFramework.psd1
-UIdea/packages/EntityFramework.6.1.3/tools/EntityFramework.PowerShell.dll
-UIdea/packages/EntityFramework.6.1.3/tools/EntityFramework.PowerShell.Utility.dll
-UIdea/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.xml
-UIdea/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll
-UIdea/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.xml
-UIdea/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll
-UIdea/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.xml
-UIdea/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.dll
-UIdea/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.xml
-UIdea/packages/EntityFramework.6.1.3/lib/net40/EntityFramework.SqlServer.dll
-UIdea/packages/EntityFramework.6.1.3/content/Web.config.transform
-UIdea/packages/EntityFramework.6.1.3/content/App.config.transform
-UIdea/packages/EntityFramework.6.1.3/EntityFramework.6.1.3.nupkg
-UIdea/packages/AspNet.ScriptManager.jQuery.1.10.2/lib/net45/AspNet.ScriptManager.jQuery.dll
-UIdea/packages/AspNet.ScriptManager.jQuery.1.10.2/lib/net40/AspNet.ScriptManager.jQuery.dll
-UIdea/packages/AspNet.ScriptManager.jQuery.1.10.2/AspNet.ScriptManager.jQuery.1.10.2.nupkg
-UIdea/packages/jQuery.1.10.2/jQuery.1.10.2.nupkg
-UIdea/packages/jQuery.1.10.2/Tools/uninstall.ps1
-UIdea/packages/jQuery.1.10.2/Tools/jquery-1.10.2.intellisense.js
-UIdea/packages/jQuery.1.10.2/Tools/install.ps1
-UIdea/packages/jQuery.1.10.2/Tools/common.ps1
-UIdea/packages/jQuery.1.10.2/Content/Scripts/jquery-1.10.2.min.map
-UIdea/packages/jQuery.1.10.2/Content/Scripts/jquery-1.10.2.min.js
-UIdea/packages/jQuery.1.10.2/Content/Scripts/jquery-1.10.2.js
-UIdea/packages/Microsoft.Owin.3.0.1/lib/net45/Microsoft.Owin.XML
-UIdea/packages/Microsoft.Owin.3.0.1/Microsoft.Owin.3.0.1.nupkg
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/vbc.rsp
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/vbc.exe.config
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/vbc.exe
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csi.rsp
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csi.exe.config
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csi.exe
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csc.rsp
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csc.exe.config
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/csc.exe
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/VBCSCompiler.exe.config
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/VBCSCompiler.exe
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Xml.XmlDocument.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Xml.XPath.dll
-UIdea/packages/Microsoft.Net.Compilers.2.1.0/tools/System.Xml.XPath.XDocument.dll
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebUIValidation.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebParts.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/WebForms.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/TreeView.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/SmartNav.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/MenuStandards.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/Menu.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/GridView.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/Focus.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/content/Scripts/WebForms/DetailsView.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.WebForms.5.0.0/Microsoft.AspNet.ScriptManager.WebForms.5.0.0.nupkg
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/lib/net45/Microsoft.ScriptManager.MSAjax.dll
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js
-UIdea/packages/Microsoft.AspNet.ScriptManager.MSAjax.5.0.0/content/Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/content/ApplicationInsights.config.transform
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/content/ApplicationInsights.config.install.xdt
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/Tools/install.ps1
-UIdea/packages/Microsoft.ApplicationInsights.WindowsServer.2.2.0/Microsoft.ApplicationInsights.WindowsServer.2.2.0.nupkg
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/lib/net45/Microsoft.AI.Web.dll
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/lib/net45/Microsoft.AI.Web.XML
-UIdea/packages/Microsoft.ApplicationInsights.Web.2.2.0/lib/net40/Microsoft.AI.Web.dll
-UIdea/UIdea/bin/System.Web.Optimization.dll
-UIdea/UIdea/bin/Owin.dll
-UIdea/UIdea/bin/roslyn/System.Security.Cryptography.Algorithms.dll
-UIdea/UIdea/bin/roslyn/System.Security.Claims.dll
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.Core.dll
-UIdea/UIdea/bin/Microsoft.AspNet.FriendlyUrls.xml
-UIdea/UIdea/bin/Newtonsoft.Json.xml
-UIdea/UIdea/bin/Newtonsoft.Json.dll
-UIdea/UIdea/bin/Microsoft.Web.Infrastructure.dll
-UIdea/UIdea/bin/Microsoft.ScriptManager.WebForms.dll
-UIdea/UIdea/bin/Microsoft.ScriptManager.MSAjax.dll
-UIdea/UIdea/bin/Microsoft.Owin.xml
-UIdea/UIdea/bin/Microsoft.Owin.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.Twitter.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.Twitter.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.OAuth.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.OAuth.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.MicrosoftAccount.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.MicrosoftAccount.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.Google.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.Google.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.Facebook.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.Facebook.dll
-UIdea/UIdea/bin/Microsoft.Owin.Security.Cookies.xml
-UIdea/UIdea/bin/Microsoft.Owin.Security.Cookies.dll
-UIdea/UIdea/bin/Microsoft.Owin.Host.SystemWeb.xml
-UIdea/UIdea/bin/Microsoft.Owin.Host.SystemWeb.dll
-UIdea/UIdea/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-UIdea/UIdea/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-UIdea/UIdea/bin/Microsoft.AspNet.Web.Optimization.WebForms.dll
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.Owin.xml
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.Owin.dll
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.EntityFramework.xml
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.EntityFramework.dll
-UIdea/UIdea/bin/Microsoft.AspNet.Identity.Core.xml
-UIdea/UIdea/bin/Microsoft.AspNet.FriendlyUrls.dll
-UIdea/UIdea/bin/Microsoft.ApplicationInsights.xml
-UIdea/UIdea/bin/Microsoft.ApplicationInsights.dll
-UIdea/UIdea/bin/Microsoft.AI.WindowsServer.xml
-UIdea/UIdea/bin/Microsoft.AI.WindowsServer.dll
-UIdea/UIdea/bin/Microsoft.AI.Web.xml
-UIdea/UIdea/bin/Microsoft.AI.Web.dll
-UIdea/UIdea/bin/Microsoft.AI.ServerTelemetryChannel.xml
-UIdea/UIdea/bin/Microsoft.AI.ServerTelemetryChannel.dll
-UIdea/UIdea/bin/Microsoft.AI.PerfCounterCollector.dll
-UIdea/UIdea/bin/Microsoft.AI.DependencyCollector.xml
-UIdea/UIdea/bin/Microsoft.AI.DependencyCollector.dll
-UIdea/UIdea/bin/Microsoft.AI.Agent.Intercept.dll
-UIdea/UIdea/bin/EntityFramework.xml
-UIdea/UIdea/bin/EntityFramework.dll
-UIdea/UIdea/bin/EntityFramework.SqlServer.xml
-UIdea/UIdea/bin/EntityFramework.SqlServer.dll
-UIdea/UIdea/bin/AspNet.ScriptManager.jQuery.dll
-UIdea/UIdea/bin/AspNet.ScriptManager.bootstrap.dll
-UIdea/UIdea/bin/ApplicationInsights.config
-UIdea/UIdea/bin/Antlr3.Runtime.pdb
-UIdea/UIdea/bin/Antlr3.Runtime.dll
-UIdea/UIdea/bin/roslyn/System.Security.AccessControl.dll
-UIdea/UIdea/bin/roslyn/System.Reflection.Metadata.dll
-UIdea/UIdea/bin/roslyn/System.IO.Pipes.dll
-UIdea/UIdea/bin/roslyn/System.IO.FileSystem.dll
-UIdea/UIdea/bin/roslyn/System.IO.FileSystem.Primitives.dll
-UIdea/UIdea/bin/roslyn/System.IO.FileSystem.DriveInfo.dll
-UIdea/UIdea/bin/roslyn/System.IO.Compression.dll
-UIdea/UIdea/bin/roslyn/System.Diagnostics.StackTrace.dll
-UIdea/UIdea/bin/roslyn/System.Diagnostics.Process.dll
-UIdea/UIdea/bin/roslyn/System.Diagnostics.FileVersionInfo.dll
-UIdea/UIdea/bin/roslyn/System.Console.dll
-UIdea/UIdea/bin/roslyn/System.Collections.Immutable.dll
-UIdea/UIdea/bin/roslyn/System.AppContext.dll
-UIdea/UIdea/bin/roslyn/Microsoft.Win32.Primitives.dll
-UIdea/UIdea/bin/roslyn/Microsoft.VisualBasic.Core.targets
-UIdea/UIdea/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll
-UIdea/UIdea/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CodeAnalysis.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll
-UIdea/UIdea/bin/roslyn/Microsoft.CSharp.Core.targets
-UIdea/UIdea/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
-UIdea/UIdea/bin/WebGrease.dll
-UIdea/UIdea/bin/UIdea.pdb
-UIdea/UIdea/bin/UIdea.dll.config
-UIdea/UIdea/bin/UIdea.dll
-UIdea/UIdea/bin/System.Web.Providers.xml
-UIdea/UIdea/bin/System.Web.Providers.dll
-UIdea/UIdea/bin/System.Web.Optimization.xml
-UIdea/UIdea/bin/roslyn/vbc.rsp
-UIdea/UIdea/bin/roslyn/vbc.exe.config
-UIdea/UIdea/bin/roslyn/vbc.exe
-UIdea/UIdea/bin/roslyn/csi.rsp
-UIdea/UIdea/bin/roslyn/csi.exe.config
-UIdea/UIdea/bin/roslyn/csi.exe
-UIdea/UIdea/bin/roslyn/csc.rsp
-UIdea/UIdea/bin/roslyn/csc.exe.config
-UIdea/UIdea/bin/roslyn/csc.exe
-UIdea/UIdea/bin/roslyn/VBCSCompiler.exe.config
-UIdea/UIdea/bin/roslyn/VBCSCompiler.exe
-UIdea/UIdea/bin/roslyn/System.Xml.XmlDocument.dll
-UIdea/UIdea/bin/roslyn/System.Xml.XPath.dll
-UIdea/UIdea/bin/roslyn/System.Xml.XPath.XDocument.dll
-UIdea/UIdea/bin/roslyn/System.Xml.ReaderWriter.dll
-UIdea/UIdea/bin/roslyn/System.ValueTuple.dll
-UIdea/UIdea/bin/roslyn/System.Threading.Thread.dll
-UIdea/UIdea/bin/roslyn/System.Text.Encoding.CodePages.dll
-UIdea/UIdea/bin/roslyn/System.Security.Principal.Windows.dll
-UIdea/UIdea/bin/roslyn/System.Security.Cryptography.X509Certificates.dll
-UIdea/UIdea/bin/roslyn/System.Security.Cryptography.Primitives.dll
-UIdea/UIdea/bin/roslyn/System.Security.Cryptography.Encoding.dll
-UIdea/UIdea/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-UIdea/UIdea/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-UIdea/UIdea/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-UIdea/UIdea/obj/Debug/UIdea.csproj.CopyComplete
-UIdea/UIdea/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-UIdea/UIdea/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-UIdea/UIdea/obj/Debug/UIdea.pdb
-UIdea/UIdea/obj/Debug/UIdea.dll
-UIdea/UIdea/obj/Debug/UIdea.csproj.FileListAbsolute.txt
-UIdea/UIdea/obj/Debug/UIdea.csproj.CoreCompileInputs.cache
-UIdea/UIdea/obj/Debug/UIdea.csprojResolveAssemblyReference.cache
+## Ignore Visual Studio temporary files, build results, and
+## files generated by popular Visual Studio add-ons.
+##
+## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JustCode is a .NET coding add-in
+.JustCode
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# Note: Comment the next line if you want to checkin your web deploy settings,
+# but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+PublishScripts/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Including strong name files can present a security risk 
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+#*.snk
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+node_modules/
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
+
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+
+# FAKE - F# Make
+.fake/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# CodeRush
+.cr/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
+
+# Tabs Studio
+*.tss
+
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# OpenCover UI analysis results
+OpenCover/
+
+# Azure Stream Analytics local run output 
+ASALocalRun/
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# NVidia Nsight GPU debugger configuration file
+*.nvuser
+
+# MFractors (Xamarin productivity tool) working folder 
+.mfractor/
