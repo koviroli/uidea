@@ -31,7 +31,7 @@ namespace UIdea.Models
         /// </summary>
         [Required]
         [MinLength(30)]
-        [MaxLength(500)]
+        [MaxLength(2000)]
         public string Description { get; set; }
 
         /// <summary>

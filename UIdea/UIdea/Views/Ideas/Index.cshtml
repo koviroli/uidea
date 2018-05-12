@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using UIdea.Models
+@using System.Text
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -42,14 +43,34 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        @Html.DisplayFor(modelItem => item.Description)
+                    <div class="col-md-12 model-description">
+                        @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 500)))
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-7" style="margin-top:20px;">
-                        <a class="usedLanguage" href="">C#</a>
-                        <a class="usedLanguage" href="">C++</a>
+                    <div class="col-md-12" style="margin-top:20px;">
+                        @foreach (var skill in item.RequiredMembers.Split(null))
+                        {
+                            byte[] asciiBytes = Encoding.ASCII.GetBytes(skill);
+                            byte r = 0, g = 0, b = 0;
+
+                            if(asciiBytes.Length > 0)
+                            {
+                                r = asciiBytes[0];
+                            }
+                            if(asciiBytes.Length > 1)
+                            {
+                                g = asciiBytes[1];
+                            }
+                            if(asciiBytes.Length > 2)
+                            {
+                                b = asciiBytes[2];
+                            }
+
+                            <a href="" class="usedLanguage" style="background-color:rgba(@Html.Raw(r),@Html.Raw(g),@Html.Raw(b),0.2)">
+                                @Html.Raw(skill)
+                            </a>
+                        }
                     </div>
                 </div>
             </div>
