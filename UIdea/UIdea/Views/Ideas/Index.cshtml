@@ -11,39 +11,51 @@
     ViewData["Title"] = "Ideas";
 }
 
-<h2>Index</h2>
+<h2>Ideas</h2>
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <p>
+<div class="row">
+    <div class="col-md-2 col-md-offset-0">
         <a asp-action="Create" class="btn btn-default">Create New</a>
-    </p>
-}
-else
-{
-    <div>@*You are not logged in*@</div>
-}
-
-@foreach (var item in Model)
-{
-    <div>
-        <div style="display:inline-block; vertical-align:top">
-            <img alt="IMAGE" src="https://st2.depositphotos.com/1896531/5752/v/950/depositphotos_57522007-stock-illustration-abstract-lightbulb.jpg" width="64" height="64" />
-        </div>
-        <div style="display:inline-block">
-            <div style="font-size:20px">
-                <a asp-action="Details" asp-route-id="@item.ID">
-                    @Html.DisplayFor(modelItem => item.Title)
-                </a>
-            </div>
-            <div style="padding:10px">
-                @Html.DisplayFor(modelItem => item.Description)
-            </div>
-            <div class="requiredmembers">
-                @Html.DisplayFor(modelItem => item.RequiredMembers)
-            </div>
-        </div>
-
     </div>
-    <hr />
+</div>
 }
+
+<div class="row">
+    <div class="col-md-9">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-1">
+                <img alt="IMAGE" src="https://st2.depositphotos.com/1896531/5752/v/950/depositphotos_57522007-stock-illustration-abstract-lightbulb.jpg" width="64" height="64" />
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>
+                            <a asp-action="Details" asp-route-id="@item.ID">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </a>
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7" style="margin-top:20px;">
+                        <a class="usedLanguage" href="">C#</a>
+                        <a class="usedLanguage" href="">C++</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+    }
+    </div>
+</div>
+

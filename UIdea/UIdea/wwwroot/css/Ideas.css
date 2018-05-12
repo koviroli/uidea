@@ -1,7 +1,10 @@
 ﻿.imgIdeaLogo{
-    margin-left:auto;
-    margin-right:auto;
+    margin: 25px auto 25px auto;
     display:block;
+}
+
+.usedLanguage{
+    background-color: #f3f3f3;
 }
 
 .ideadescription {
