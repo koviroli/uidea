@@ -23,7 +23,7 @@ namespace UIdea.Controllers
             return View();
         }
         
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, int? page)
         {
             var ideas = from i in _context.Idea
                          select i;
@@ -33,7 +33,8 @@ namespace UIdea.Controllers
                 ideas = ideas.Where(s => s.RequiredMembers.Contains(searchString));
             }
 
-            return View(await ideas.ToListAsync());
+            int pageSize = 3;
+            return View(await PaginatedList<Idea>.CreateAsync(ideas.AsNoTracking(), page ?? 1, pageSize));
         }
 
         // GET: Ideas/Details/5

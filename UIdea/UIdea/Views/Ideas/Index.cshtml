@@ -6,7 +6,8 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@model IEnumerable<UIdea.Models.Idea>
+@model PaginatedList<UIdea.Models.Idea>
+
 
 
 @{
@@ -45,7 +46,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 model-description">
-                            @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 500)))
+                            @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 200)))
                         </div>
                     </div>
                     <div class="row">
@@ -68,7 +69,7 @@
                                     b = asciiBytes[2];
                                 }
 
-                                <a asp-controller="Ideas" asp-action="Index" 
+                                <a asp-controller="Ideas" asp-action="Index"
                                    asp-all-route-data="@Context.GetQueryParameters().WithRoute("searchString", skill);"
                                    class="usedLanguage" style="background-color:rgba(@Html.Raw(r+50),@Html.Raw(g+30),@Html.Raw(b+50),0.4)">
                                     @Html.Raw(skill)
@@ -82,4 +83,20 @@
         }
     </div>
 </div>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-page="@(Model.PageIndex - 1)"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-page="@(Model.PageIndex + 1)"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
 
