@@ -21,22 +21,47 @@
     <div class="col-md-6">
         <dl class="dl-horizontal" style="margin-top:50px">
             <dt>
-                Facebook:
+                @Html.DisplayNameFor(model => model.FacebookContact)
             </dt>
             <dd>
-                facebook.com/BestIdea
+                @Html.DisplayFor(model => model.FacebookContact)
             </dd>
             <dt>
-                Github:
+                @Html.DisplayNameFor(model => model.InstagramContact)
             </dt>
             <dd>
-                github.com/BestIdeaRepo
+                @Html.DisplayFor(model => model.InstagramContact)
             </dd>
             <dt>
-                Webpage:
+                @Html.DisplayNameFor(model => model.TwitterContact)
             </dt>
             <dd>
-                www.bestidea.com
+                @Html.DisplayFor(model => model.TwitterContact)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.GitHubContact)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.GitHubContact)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailContact)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EmailContact)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.LinkedinContact)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LinkedinContact)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OtherContact)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OtherContact)
             </dd>
         </dl>
     </div>

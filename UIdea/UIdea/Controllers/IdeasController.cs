@@ -66,7 +66,8 @@ namespace UIdea.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,OwnerID,Title,Description,Members,RequiredMembers")] Idea idea)
+        public async Task<IActionResult> Create([Bind("ID,OwnerID,Title,Description,Members,RequiredMembers," +
+            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact")] Idea idea)
         {
             if (ModelState.IsValid)
             {
@@ -100,7 +101,8 @@ namespace UIdea.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ID,OwnerID,Title,Description,Members,RequiredMembers")] Idea idea)
+        public async Task<IActionResult> Edit(string id, [Bind("ID,OwnerID,Title,Description,Members,RequiredMembers," +
+            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact")] Idea idea)
         {
             if (id != idea.ID)
             {

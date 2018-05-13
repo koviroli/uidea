@@ -14,10 +14,10 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
             @*<div class="form-group">
-                <label asp-for="OwnerID" class="control-label"></label>
-                <input asp-for="OwnerID" class="form-control" />
-                <span asp-validation-for="OwnerID" class="text-danger"></span>
-            </div>*@
+            <label asp-for="OwnerID" class="control-label"></label>
+            <input asp-for="OwnerID" class="form-control" />
+            <span asp-validation-for="OwnerID" class="text-danger"></span>
+        </div>*@
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -37,6 +37,42 @@
                 <label asp-for="RequiredMembers" class="control-label"></label>
                 <input asp-for="RequiredMembers" class="form-control" />
                 <span asp-validation-for="RequiredMembers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FacebookContact" class="control-label"></label>
+                <input asp-for="FacebookContact" class="form-control" />
+                <span asp-validation-for="FacebookContact" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="InstagramContact" class="control-label"></label>
+                <input asp-for="InstagramContact" class="form-control" />
+                <span asp-validation-for="InstagramContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TwitterContact" class="control-label"></label>
+                <input asp-for="TwitterContact" class="form-control" />
+                <span asp-validation-for="TwitterContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GitHubContact" class="control-label"></label>
+                <input asp-for="GitHubContact" class="form-control" />
+                <span asp-validation-for="GitHubContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailContact" class="control-label"></label>
+                <input asp-for="EmailContact" class="form-control" />
+                <span asp-validation-for="EmailContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkedinContact" class="control-label"></label>
+                <input asp-for="LinkedinContact" class="form-control" />
+                <span asp-validation-for="LinkedinContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OtherContact" class="control-label"></label>
+                <input asp-for="OtherContact" class="form-control" />
+                <span asp-validation-for="OtherContact" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

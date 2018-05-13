@@ -10,9 +10,10 @@ using UIdea.Models;
 namespace UIdea.Migrations
 {
     [DbContext(typeof(UIdeaContext))]
-    partial class UIdeaContextModelSnapshot : ModelSnapshot
+    [Migration("20180513150812_ContactFields")]
+    partial class ContactFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
