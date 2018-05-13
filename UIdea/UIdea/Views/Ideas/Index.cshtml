@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using UIdea.Models
 @using System.Text
+@using UIdea.Controllers
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -16,67 +17,69 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-<div class="row">
-    <div class="col-md-2 col-md-offset-0">
-        <a asp-action="Create" class="btn btn-default">Create New</a>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-0" style="margin:10px">
+            <a asp-action="Create" class="btn btn-default">Create New</a>
+        </div>
     </div>
-</div>
 }
 
 <div class="row">
     <div class="col-md-9">
-    @foreach (var item in Model)
-    {
-        <div class="row">
-            <div class="col-md-1">
-                <img alt="IMAGE" src="https://st2.depositphotos.com/1896531/5752/v/950/depositphotos_57522007-stock-illustration-abstract-lightbulb.jpg" width="64" height="64" />
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-1">
+                    <img alt="IMAGE" src="https://st2.depositphotos.com/1896531/5752/v/950/depositphotos_57522007-stock-illustration-abstract-lightbulb.jpg" width="64" height="64" />
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>
+                                <a asp-action="Details" asp-route-id="@item.ID">
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </a>
+                            </h4>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 model-description">
+                            @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 500)))
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top:20px;">
+                            @foreach (var skill in item.RequiredMembers.Split(null))
+                            {
+                                byte[] asciiBytes = Encoding.ASCII.GetBytes(skill);
+                                byte r = 0, g = 0, b = 0;
+
+                                if (asciiBytes.Length > 0)
+                                {
+                                    r = asciiBytes[0];
+                                }
+                                if (asciiBytes.Length > 1)
+                                {
+                                    g = asciiBytes[1];
+                                }
+                                if (asciiBytes.Length > 2)
+                                {
+                                    b = asciiBytes[2];
+                                }
+
+                                <a asp-controller="Ideas" asp-action="Index" 
+                                   asp-all-route-data="@Context.GetQueryParameters().WithRoute("searchString", skill);"
+                                   class="usedLanguage" style="background-color:rgba(@Html.Raw(r+50),@Html.Raw(g+30),@Html.Raw(b+50),0.4)">
+                                    @Html.Raw(skill)
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>
-                            <a asp-action="Details" asp-route-id="@item.ID">
-                                @Html.DisplayFor(modelItem => item.Title)
-                            </a>
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 model-description">
-                        @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 500)))
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12" style="margin-top:20px;">
-                        @foreach (var skill in item.RequiredMembers.Split(null))
-                        {
-                            byte[] asciiBytes = Encoding.ASCII.GetBytes(skill);
-                            byte r = 0, g = 0, b = 0;
-
-                            if(asciiBytes.Length > 0)
-                            {
-                                r = asciiBytes[0];
-                            }
-                            if(asciiBytes.Length > 1)
-                            {
-                                g = asciiBytes[1];
-                            }
-                            if(asciiBytes.Length > 2)
-                            {
-                                b = asciiBytes[2];
-                            }
-
-                            <a href="" class="usedLanguage" style="background-color:rgba(@Html.Raw(r),@Html.Raw(g),@Html.Raw(b),0.2)">
-                                @Html.Raw(skill)
-                            </a>
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr />
-    }
+            <hr />
+        }
     </div>
 </div>
 

@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using UIdea.Data;
 using UIdea.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
 
 namespace UIdea.Controllers
 {
@@ -25,11 +22,18 @@ namespace UIdea.Controllers
         {
             return View();
         }
-
-        // GET: Ideas
-        public async Task<IActionResult> Index()
+        
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Idea.ToListAsync());
+            var ideas = from i in _context.Idea
+                         select i;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                ideas = ideas.Where(s => s.RequiredMembers.Contains(searchString));
+            }
+
+            return View(await ideas.ToListAsync());
         }
 
         // GET: Ideas/Details/5
@@ -157,6 +161,30 @@ namespace UIdea.Controllers
         private bool IdeaExists(string id)
         {
             return _context.Idea.Any(e => e.ID == id);
+        }
+    }
+
+    public static class QueryParamsExtensions
+    {
+        public static QueryParameters GetQueryParameters(this HttpContext context)
+        {
+            var dictionary = context.Request.Query.ToDictionary(d => d.Key, d => d.Value.ToString());
+            return new QueryParameters(dictionary);
+        }
+    }
+
+    public class QueryParameters : Dictionary<string, string>
+    {
+        public QueryParameters() : base() { }
+        public QueryParameters(int capacity) : base(capacity) { }
+        public QueryParameters(IDictionary<string, string> dictionary) : base(dictionary) { }
+
+        public QueryParameters WithRoute(string routeParam, string routeValue)
+        {
+            if(!ContainsKey(routeParam))
+                Add(routeParam, routeValue);
+
+            return this;
         }
     }
 }
