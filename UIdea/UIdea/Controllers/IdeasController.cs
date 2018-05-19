@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UIdea.Models;
-using Microsoft.AspNetCore.Http;
 
 namespace UIdea.Controllers
 {
@@ -33,7 +31,7 @@ namespace UIdea.Controllers
                 ideas = ideas.Where(s => s.RequiredMembers.Contains(searchString));
             }
 
-            int pageSize = 3;
+            int pageSize = 10;
             return View(await PaginatedList<Idea>.CreateAsync(ideas.AsNoTracking(), page ?? 1, pageSize));
         }
 

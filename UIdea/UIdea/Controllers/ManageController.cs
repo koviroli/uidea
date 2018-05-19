@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -9,7 +8,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using UIdea.Models;
 using UIdea.Models.ManageViewModels;
 using UIdea.Services;
@@ -25,6 +23,7 @@ namespace UIdea.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
+        private readonly UIdeaContext _uIdeaContext;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
         private const string RecoveryCodesKey = nameof(RecoveryCodesKey);
@@ -34,13 +33,15 @@ namespace UIdea.Controllers
           SignInManager<ApplicationUser> signInManager,
           IEmailSender emailSender,
           ILogger<ManageController> logger,
-          UrlEncoder urlEncoder)
+          UrlEncoder urlEncoder,
+          UIdeaContext uideacontext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
+            _uIdeaContext = uideacontext;
         }
 
         [TempData]
@@ -413,6 +414,19 @@ namespace UIdea.Controllers
             TempData[RecoveryCodesKey] = recoveryCodes.ToArray();
 
             return RedirectToAction(nameof(ShowRecoveryCodes));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> OwnedIdeas(int? page)
+        {
+            var actualUserId = User.GetUserId();
+            var ideas = from i in _uIdeaContext.Idea
+                        select i;
+
+            ideas = ideas.Where(i => i.OwnerID == actualUserId);
+
+            int pageSize = 5;
+            return View(await PaginatedList<Idea>.CreateAsync(ideas, page ?? 1, pageSize));
         }
 
         [HttpGet]
