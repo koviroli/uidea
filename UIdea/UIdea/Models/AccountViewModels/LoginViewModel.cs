@@ -9,7 +9,8 @@ namespace UIdea.Models.AccountViewModels
     public class LoginViewModel
     {
         [Required]
-        [EmailAddress]
+        //[EmailAddress]
+        [Display(Name = "Email or Username")]
         public string Email { get; set; }
 
         [Required]
