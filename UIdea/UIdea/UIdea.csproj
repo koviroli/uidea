@@ -22,4 +22,8 @@
     <None Include="wwwroot\css\Ideas.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
 </Project>

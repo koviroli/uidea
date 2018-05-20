@@ -13,11 +13,6 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
-            @*<div class="form-group">
-            <label asp-for="OwnerID" class="control-label"></label>
-            <input asp-for="OwnerID" class="form-control" />
-            <span asp-validation-for="OwnerID" class="text-danger"></span>
-        </div>*@
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -43,7 +38,6 @@
                 <input asp-for="FacebookContact" class="form-control" />
                 <span asp-validation-for="FacebookContact" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="InstagramContact" class="control-label"></label>
                 <input asp-for="InstagramContact" class="form-control" />
@@ -77,6 +71,14 @@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <form asp-action="FileUpload" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ID" />
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" id="file" style="width: 100%;" />
+            <input type="submit" value="Upload" class="btn btn-default" />
         </form>
     </div>
 </div>

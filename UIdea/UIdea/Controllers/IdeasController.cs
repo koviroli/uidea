@@ -1,19 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UIdea.Models;
+
+
 
 namespace UIdea.Controllers
 {
     public class IdeasController : Controller
     {
         private readonly UIdeaContext _context;
+        private readonly IHostingEnvironment _env;
 
-        public IdeasController(UIdeaContext context)
+        public IdeasController(UIdeaContext context, IHostingEnvironment env)
         {
             _context = context;
+            _env = env;
+            
         }
 
         public IActionResult Ideas()
@@ -128,6 +139,34 @@ namespace UIdea.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(idea);
+        }
+
+        // POST: Ideas/Delete/5
+        [HttpPost, ActionName("FileUpload")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FileUpload(string ID, IFormFile file)
+        {
+            var uploads = Path.Combine(_env.WebRootPath, "uploads", ID);
+            Directory.CreateDirectory(uploads);
+            if (file.Length > 0)
+            {
+                var filePath = Path.Combine(uploads, file.FileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+            }
+            
+            //majd igy kéne berakni a képet az ideaba
+            //var idea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
+            //vagy db-be betölteni
+            //using (var memoryStream = new MemoryStream())
+            //{
+            //    await file.CopyToAsync(memoryStream);
+            //    idea.AvatarImage = memoryStream.ToArray();
+            //}
+
+            return RedirectToAction("Index", "Ideas");
         }
 
         // GET: Ideas/Delete/5
