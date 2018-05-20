@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-lumen.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/Ideas.css" />
+        <link rel="stylesheet" href="~/css/global.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -30,13 +31,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <img class="navbar-brand" src="~/images/brain_stransparent_abstract.png"/>
-                <a asp-area="" asp-controller="Ideas" asp-action="Index" class="navbar-brand">UIdea</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">UIdea</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Ideas" asp-action="Index">Ideas</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Users</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"></a></li>
+                    <li><a asp-area="" asp-controller="Ideas" asp-action="Tags">Tags</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -45,8 +46,14 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer style="text-align:center">
+
             <p>&copy; 2018 - UIdea</p>
+            <a asp-controller="Home" asp-action="Contact">Contact</a> |
+            <a href="https://www.facebook.com/Uidea/">Facebook</a> |
+            <a href="https://www.instagram.com/Uidea/">Instagram</a> |
+            <a href="https://twitter.com/Uidea/">Twitter</a> |
+            <a href="https://www.linkedin.com/Uidea/">LinkedIn</a>
         </footer>
     </div>
 
