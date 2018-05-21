@@ -61,10 +61,6 @@ namespace UIdea.Controllers
                 return NotFound();
             }
 
-            // this instatiation is because old ideas does not have AvatarImage so these are nulls
-            if (idea.AvatarImage == null)
-                idea.AvatarImage = new byte[0];
-
             return View(idea);
         }
 

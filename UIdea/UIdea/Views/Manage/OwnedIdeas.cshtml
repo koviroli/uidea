@@ -13,55 +13,57 @@
         @foreach (var item in Model)
         {
             <div class="row">
-                <div class="col-md-1">
-                    <img alt="IMAGE" src="https://st2.depositphotos.com/1896531/5752/v/950/depositphotos_57522007-stock-illustration-abstract-lightbulb.jpg" width="64" height="64" />
+                <div class="col-md-3">
+                        <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(item.AvatarImage)" width="128" height="128" type="image/png">
+                            <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="128" height="128" />
+                        </object>
                 </div>
-                <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4>
-                                <a asp-controller="Ideas" asp-action="Details" asp-route-id="@item.ID">
-                                    @Html.DisplayFor(modelItem => item.Title)
-                                </a>
-                            </h4>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>
+                                    <a asp-controller="Ideas" asp-action="Details" asp-route-id="@item.ID">
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </a>
+                                </h4>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 model-description">
-                            @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 200)))
+                        <div class="row">
+                            <div class="col-md-12 model-description">
+                                @Html.Raw(item.Description.Substring(0, Math.Min(item.Description.Length, 200)))
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" style="margin-top:20px;">
-                            @foreach (var skill in item.RequiredMembers.Split(null))
-                            {
-                                byte[] asciiBytes = Encoding.ASCII.GetBytes(skill);
-                                byte r = 0, g = 0, b = 0;
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top:20px;">
+                                @foreach (var skill in item.RequiredMembers.Split(null))
+                {
+                    byte[] asciiBytes = Encoding.ASCII.GetBytes(skill);
+                    byte r = 0, g = 0, b = 0;
 
-                                if (asciiBytes.Length > 0)
-                                {
-                                    r = asciiBytes[0];
-                                }
-                                if (asciiBytes.Length > 1)
-                                {
-                                    g = asciiBytes[1];
-                                }
-                                if (asciiBytes.Length > 2)
-                                {
-                                    b = asciiBytes[2];
-                                }
+                    if (asciiBytes.Length > 0)
+                    {
+                        r = asciiBytes[0];
+                    }
+                    if (asciiBytes.Length > 1)
+                    {
+                        g = asciiBytes[1];
+                    }
+                    if (asciiBytes.Length > 2)
+                    {
+                        b = asciiBytes[2];
+                    }
 
-                                <a asp-controller="Ideas" asp-action="Index"
-                                   asp-all-route-data="@Context.GetQueryParameters().WithRoute("searchString", skill);"
-                                   class="usedLanguage" style="background-color:rgba(@Html.Raw(r+50),@Html.Raw(g+30),@Html.Raw(b+50),0.4)">
-                                    @Html.Raw(skill)
-                                </a>
-                            }
+                    <a asp-controller="Ideas" asp-action="Index"
+                       asp-all-route-data="@Context.GetQueryParameters().WithRoute("searchString", skill);"
+                       class="usedLanguage" style="background-color:rgba(@Html.Raw(r+50),@Html.Raw(g+30),@Html.Raw(b+50),0.4)">
+                        @Html.Raw(skill)
+                    </a>
+}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <hr />
         }
     </div>
