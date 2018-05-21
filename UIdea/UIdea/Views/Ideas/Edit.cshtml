@@ -13,6 +13,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="OwnerID"/>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -71,6 +72,7 @@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
+            <input type="hidden" asp-for="AvatarImage"/>
         </form>
 
     </div>

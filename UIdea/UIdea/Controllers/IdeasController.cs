@@ -185,8 +185,8 @@ namespace UIdea.Controllers
                     }
                 }
             }
-            return RedirectToAction("Index");
-            //return RedirectToAction("Edit", new { id = actualIdea.ID, idea = actualIdea });
+
+            return RedirectToAction("Edit", new { id = actualIdea.ID });
         }
 
         // GET: Ideas/Delete/5
