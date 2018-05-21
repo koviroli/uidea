@@ -76,13 +76,21 @@ namespace UIdea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,OwnerID,Title,Description,Members,RequiredMembers," +
-            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact,AvatarImage")] Idea idea)
+            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact,AvatarImage")] Idea idea, IFormFile file)
         {
             if (ModelState.IsValid)
             {
                 var actualUserId = User.GetUserId();
                 idea.OwnerID = actualUserId;
                 idea.AvatarImage = new byte[0];
+                if(file.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await file.CopyToAsync(memoryStream);
+                        idea.AvatarImage = memoryStream.ToArray();
+                    }
+                }
                 _context.Add(idea);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -147,22 +155,15 @@ namespace UIdea.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> FileUpload(string ID, IFormFile file)
         {
-            var uploads = Path.Combine(_env.WebRootPath, "uploads", ID);
-            Directory.CreateDirectory(uploads);
-            if (file.Length > 0)
-            {
-                var filePath = Path.Combine(uploads, file.FileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(fileStream);
-                }
-            }
-            
             var idea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
-            using (var memoryStream = new MemoryStream())
+
+            if(file.Length > 0)
             {
-                await file.CopyToAsync(memoryStream);
-                idea.AvatarImage = memoryStream.ToArray();
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(memoryStream);
+                    idea.AvatarImage = memoryStream.ToArray();
+                }
             }
 
             if (ModelState.IsValid)
