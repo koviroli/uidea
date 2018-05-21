@@ -61,6 +61,10 @@ namespace UIdea.Controllers
                 return NotFound();
             }
 
+            // this instatiation is because old ideas does not have AvatarImage so these are nulls
+            if (idea.AvatarImage == null)
+                idea.AvatarImage = new byte[0];
+
             return View(idea);
         }
 
@@ -76,12 +80,13 @@ namespace UIdea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,OwnerID,Title,Description,Members,RequiredMembers," +
-            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact")] Idea idea)
+            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact,AvatarImage")] Idea idea)
         {
             if (ModelState.IsValid)
             {
                 var actualUserId = User.GetUserId();
                 idea.OwnerID = actualUserId;
+                idea.AvatarImage = new byte[0];
                 _context.Add(idea);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -111,7 +116,7 @@ namespace UIdea.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("ID,OwnerID,Title,Description,Members,RequiredMembers," +
-            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact")] Idea idea)
+            "FacebookContact,InstagramContact,TwitterContact,GitHubContact,EmailContact,LinkedinContact,OtherContact,AvatarImage")] Idea idea)
         {
             if (id != idea.ID)
             {
@@ -157,16 +162,34 @@ namespace UIdea.Controllers
                 }
             }
             
-            //majd igy kéne berakni a képet az ideaba
-            //var idea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
-            //vagy db-be betölteni
-            //using (var memoryStream = new MemoryStream())
-            //{
-            //    await file.CopyToAsync(memoryStream);
-            //    idea.AvatarImage = memoryStream.ToArray();
-            //}
+            var idea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
+            using (var memoryStream = new MemoryStream())
+            {
+                await file.CopyToAsync(memoryStream);
+                idea.AvatarImage = memoryStream.ToArray();
+            }
 
-            return RedirectToAction("Index", "Ideas");
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(idea);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!IdeaExists(idea.ID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
         // GET: Ideas/Delete/5

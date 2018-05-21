@@ -66,5 +66,7 @@ namespace UIdea.Models
 
         [Display(Name = "Other")]
         public string OtherContact { get; set; }
+
+        public byte[] AvatarImage { get; set; }
     }
 }
