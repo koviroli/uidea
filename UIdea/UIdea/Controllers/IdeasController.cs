@@ -83,7 +83,7 @@ namespace UIdea.Controllers
                 var actualUserId = User.GetUserId();
                 idea.OwnerID = actualUserId;
                 idea.AvatarImage = new byte[0];
-                if(file.Length > 0)
+                if(file != null && file.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
                     {
@@ -155,14 +155,14 @@ namespace UIdea.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> FileUpload(string ID, IFormFile file)
         {
-            var idea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
-
-            if(file.Length > 0)
+            var actualIdea = await _context.Idea.SingleOrDefaultAsync(i => i.ID.Equals(ID));
+            
+            if(file != null && file.Length > 0)
             {
                 using (var memoryStream = new MemoryStream())
                 {
                     await file.CopyToAsync(memoryStream);
-                    idea.AvatarImage = memoryStream.ToArray();
+                    actualIdea.AvatarImage = memoryStream.ToArray();
                 }
             }
 
@@ -170,12 +170,12 @@ namespace UIdea.Controllers
             {
                 try
                 {
-                    _context.Update(idea);
+                    _context.Update(actualIdea);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!IdeaExists(idea.ID))
+                    if (!IdeaExists(actualIdea.ID))
                     {
                         return NotFound();
                     }
@@ -185,8 +185,8 @@ namespace UIdea.Controllers
                     }
                 }
             }
-
             return RedirectToAction("Index");
+            //return RedirectToAction("Edit", new { id = actualIdea.ID, idea = actualIdea });
         }
 
         // GET: Ideas/Delete/5

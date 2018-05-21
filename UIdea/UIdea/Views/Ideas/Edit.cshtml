@@ -9,7 +9,7 @@
 <h4>Idea</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
@@ -72,15 +72,21 @@
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
+
+    </div>
+    <div class="col-md-4">
+        <label>Avatar image</label>
+        <div class="form-group">
+            <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
+                <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
+            </object>
+        </div>
         <form asp-action="FileUpload" enctype="multipart/form-data">
             <input type="hidden" asp-for="ID" />
             <label for="file">Upload Image:</label>
             <input type="file" name="file" id="file" style="width: 100%;" />
             <input type="submit" value="Upload" class="btn btn-default" />
         </form>
-    </div>
-    <div class="col-md-4">
-
     </div>
 </div>
 
