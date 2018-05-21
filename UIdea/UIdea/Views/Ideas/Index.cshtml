@@ -83,11 +83,16 @@
     </div>
 </div>
 
-@for(var i = 1; i <= Model.TotalPages; ++i)
-{
-    <a asp-action="Index" style="margin:5px" 
-       asp-route-page="@i">
-        @i
-    </a>
-}
+<ul class="pagination">
+    @for (var i = 1; i <= Model.TotalPages; ++i)
+    {
+    <li>
+        <a asp-action="Index" style="margin:5px"
+           asp-route-page="@i">
+            @i
+        </a>
+    </li>
+
+    }
+</ul>
 

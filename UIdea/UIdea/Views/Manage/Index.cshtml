@@ -7,6 +7,30 @@
 <h4>@ViewData["Title"]</h4>
 @Html.Partial("_StatusMessage", Model.StatusMessage)
 <div class="row">
+    <div class="col-md-4">
+        <div class="well well-lg">
+            <img class="" width="128" height="128" src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&h=350" />
+            <form asp-action="FileUpload" enctype="multipart/form-data">
+                <input style="margin-top:5px" type="file" name="file" id="file" />
+                <input type="submit" value="Upload" class="btn btn-default" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div style="margin:10px">
+            <span class="label label-primary">Registered: 08. december. 2018</span>
+        </div>
+        <div style="margin:10px">
+            <span class="label label-primary">XP: 1254</span>
+        </div>
+        <div style="margin:10px">
+            <span class="label label-primary">Projects: 6</span>
+        </div>
+
+
+    </div>
+</div>
+<div class="row">
     <div class="col-md-6">
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
