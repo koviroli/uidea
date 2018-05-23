@@ -21,5 +21,7 @@ namespace UIdea.Models.ManageViewModels
         public string PhoneNumber { get; set; }
 
         public string StatusMessage { get; set; }
+
+        public DateTime DateRegistered { get; set; }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using UIdea.Data;
 using UIdea.Models;
 using UIdea.Models.AccountViewModels;
 using UIdea.Services;
@@ -22,6 +23,7 @@ namespace UIdea.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ApplicationDbContext _appDbContext;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
@@ -29,12 +31,14 @@ namespace UIdea.Controllers
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
-            ILogger<AccountController> logger)
+            ILogger<AccountController> logger,
+            ApplicationDbContext appDbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
+            _appDbContext = appDbContext;
         }
 
         [TempData]
@@ -62,12 +66,15 @@ namespace UIdea.Controllers
                 Microsoft.AspNetCore.Identity.SignInResult result = null;
                 // Login with Email or Username
                 // First try with Email
-                var user = await _userManager.FindByEmailAsync(model.Email);
+                ApplicationUser user = await _userManager.FindByEmailAsync(model.Email);
                 if(user != null)
                 {
                     result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
+                        user.DateLastLogin = DateTime.Now;
+                        _appDbContext.Update(user);
+                        await _appDbContext.SaveChangesAsync();
                         _logger.LogInformation("User logged in.");
                         return RedirectToLocal(returnUrl);
                     }
@@ -78,6 +85,10 @@ namespace UIdea.Controllers
                 result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    user = _userManager.Users.FirstOrDefault(u => u.Email.Equals(model.Email) || u.UserName.Equals(model.Email));
+                    user.DateLastLogin = DateTime.Now;
+                    _appDbContext.Update(user);
+                    await _appDbContext.SaveChangesAsync();
                     _logger.LogInformation("User logged in.");
                     return RedirectToLocal(returnUrl);
                 }
@@ -235,6 +246,11 @@ namespace UIdea.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+                user.XP = 0;
+                user.AvatarImage = new byte[0];
+                user.DateLastUpdate = DateTime.Now;
+                user.DateRegistered = DateTime.Now;
+                user.DateLastLogin = DateTime.Now;
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -245,6 +261,7 @@ namespace UIdea.Controllers
                     await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
                     _logger.LogInformation("User created a new account with password.");
                     return RedirectToLocal(returnUrl);
                 }

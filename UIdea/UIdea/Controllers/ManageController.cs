@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using UIdea.Data;
 using UIdea.Models;
 using UIdea.Models.ManageViewModels;
 using UIdea.Services;
@@ -24,6 +25,7 @@ namespace UIdea.Controllers
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
         private readonly UIdeaContext _uIdeaContext;
+        private readonly ApplicationDbContext _appDbContext;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
         private const string RecoveryCodesKey = nameof(RecoveryCodesKey);
@@ -34,7 +36,8 @@ namespace UIdea.Controllers
           IEmailSender emailSender,
           ILogger<ManageController> logger,
           UrlEncoder urlEncoder,
-          UIdeaContext uideacontext)
+          UIdeaContext uideacontext,
+          ApplicationDbContext applicationDbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -42,6 +45,7 @@ namespace UIdea.Controllers
             _logger = logger;
             _urlEncoder = urlEncoder;
             _uIdeaContext = uideacontext;
+            _appDbContext = applicationDbContext;
         }
 
         [TempData]
@@ -62,7 +66,8 @@ namespace UIdea.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
-                StatusMessage = StatusMessage
+                StatusMessage = StatusMessage,
+                DateRegistered = user.DateRegistered
             };
 
             return View(model);
@@ -72,6 +77,7 @@ namespace UIdea.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(IndexViewModel model)
         {
+            var userDataChanged = false;
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -90,8 +96,8 @@ namespace UIdea.Controllers
                 if(!setUsernameResult.Succeeded)
                 {
                     throw new ApplicationException($"Unexpected error occurred setting email for user with ID '{user.Id}'.");
-
                 }
+                userDataChanged = true;
             }
 
             var email = user.Email;
@@ -102,6 +108,7 @@ namespace UIdea.Controllers
                 {
                     throw new ApplicationException($"Unexpected error occurred setting email for user with ID '{user.Id}'.");
                 }
+                userDataChanged = true;
             }
 
             var phoneNumber = user.PhoneNumber;
@@ -112,6 +119,14 @@ namespace UIdea.Controllers
                 {
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
+                userDataChanged = true;
+            }
+
+            if(userDataChanged)
+            {
+                user.DateLastUpdate = DateTime.Now;
+                _appDbContext.Update(user);
+                await _appDbContext.SaveChangesAsync();
             }
 
             StatusMessage = "Your profile has been updated";
