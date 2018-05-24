@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -26,12 +28,14 @@ namespace UIdea.Controllers
         private readonly ApplicationDbContext _appDbContext;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ILogger<AccountController> logger,
+            IHostingEnvironment hostingEnv,
             ApplicationDbContext appDbContext)
         {
             _userManager = userManager;
@@ -39,6 +43,7 @@ namespace UIdea.Controllers
             _emailSender = emailSender;
             _logger = logger;
             _appDbContext = appDbContext;
+            _hostingEnvironment = hostingEnv;
         }
 
         [TempData]
@@ -247,7 +252,22 @@ namespace UIdea.Controllers
             {
                 var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 user.XP = 0;
-                user.AvatarImage = new byte[0];
+
+                var defaultAvatar = Path.Combine(_hostingEnvironment.WebRootPath, "images", "ideaavatar_default_lightbulb_25_25.jpg");
+                if(!System.IO.File.Exists(defaultAvatar))
+                {
+                    user.AvatarImage = new byte[0];
+                }
+                else
+                {
+                    using (var img = System.IO.File.OpenRead(@defaultAvatar))
+                    {
+                        user.AvatarImage = new byte[img.Length];
+                        img.Read(user.AvatarImage, 0, (int)img.Length);
+                    }
+                }
+
+                 //user.AvatarImage = new byte[0];
                 user.DateLastUpdate = DateTime.Now;
                 user.DateRegistered = DateTime.Now;
                 user.DateLastLogin = DateTime.Now;

@@ -9,9 +9,13 @@
 <div class="row">
     <div class="col-md-4">
         <div class="well well-lg">
-            <img class="" width="128" height="128" src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&h=350" />
+            <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
+                <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
+            </object>
             <form asp-action="FileUpload" enctype="multipart/form-data">
-                <input style="margin-top:5px" type="file" name="file" id="file" />
+                <input type="hidden"/>
+                <label for="file">Upload Image:</label>
+                <input type="file" name="file" id="file" style="width: 100%;" />
                 <input type="submit" value="Upload" class="btn btn-default" />
             </form>
         </div>

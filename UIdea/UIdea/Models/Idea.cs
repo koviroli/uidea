@@ -23,7 +23,7 @@ namespace UIdea.Models
         /// </summary>
         [Required]
         [MinLength(3)]
-        [MaxLength(25)]
+        [MaxLength(50)]
         public string Title { get; set; }
 
         /// <summary>

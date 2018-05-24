@@ -1,12 +1,15 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using UIdea.Data;
 using UIdea.Models;
@@ -67,10 +70,49 @@ namespace UIdea.Controllers
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage,
-                DateRegistered = user.DateRegistered
+                DateRegistered = user.DateRegistered,
+                AvatarImage = user.AvatarImage
             };
 
             return View(model);
+        }
+
+        [HttpPost, ActionName("FileUpload")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FileUpload(IFormFile file)
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            if (file != null && file.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(memoryStream);
+                    user.AvatarImage = memoryStream.ToArray();
+                }
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _appDbContext.Update(user);
+                    await _appDbContext.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_appDbContext.Users.Any(u => u.Id == user.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpPost]

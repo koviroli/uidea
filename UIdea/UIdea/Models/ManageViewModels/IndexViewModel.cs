@@ -23,5 +23,7 @@ namespace UIdea.Models.ManageViewModels
         public string StatusMessage { get; set; }
 
         public DateTime DateRegistered { get; set; }
+
+        public byte[] AvatarImage { get; set; }
     }
 }
