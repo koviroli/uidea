@@ -145,7 +145,7 @@ namespace UIdea.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", new { id = idea.ID });
             }
             return View(idea);
         }

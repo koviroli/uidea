@@ -3,6 +3,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @using UIdea.Models
+@using UIdea.Extensions;
 
 @{
     ViewData["Title"] = "Details";
@@ -11,14 +12,6 @@
 <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
     <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
 </object>
-
-<div class="row">
-    <div class="col-md-12" style="text-align:center">
-        <a href="">Change logo</a>
-    </div>
-</div>
-
-
 <div class="row">
     <div class="col-md-6" style="text-align:center">
         <h2>@Html.DisplayFor(model => model.Title)</h2>
@@ -27,37 +20,37 @@
     <div class="col-md-6">
         <dl class="dl-horizontal" style="margin-top:50px">
             <dt>
-                @Html.DisplayNameFor(model => model.FacebookContact)
+                <i class="fa fa-facebook-official" style="font-size:24px"></i>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.FacebookContact)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.InstagramContact)
+                <i class="fa fa-instagram" style="font-size:24px"></i>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.InstagramContact)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.TwitterContact)
+                <i class="fa fa-twitter-square" style="font-size:24px"></i>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.TwitterContact)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.GitHubContact)
+                <i class="fa fa-github" style="font-size:24px"></i>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.GitHubContact)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.EmailContact)
+                <span class="glyphicon glyphicon-envelope" style="font-size:24px"></span>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.EmailContact)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.LinkedinContact)
+                <i class="fa fa-linkedin-square" style="font-size:24px"></i>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.LinkedinContact)
@@ -76,9 +69,8 @@
 @if (SignInManager.IsSignedIn(User) && User.GetUserId().Equals(Model.OwnerID))
 {
     <div>
-        <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-        <a asp-action="Delete" asp-route-id="@Model.ID">Delete</a> |
-        <a asp-action="Index">Back to List</a>
+        <a class="btn btn-default" role="button" asp-action="Edit" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-edit"></span>Edit</a> 
+        <a class="btn btn-default" role="button" asp-action="Delete" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-remove"></span> Delete</a> 
     </div>
 }
 

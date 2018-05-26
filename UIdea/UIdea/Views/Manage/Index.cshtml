@@ -14,8 +14,7 @@
             </object>
             <form asp-action="FileUpload" enctype="multipart/form-data">
                 <input type="hidden"/>
-                <label for="file">Upload Image:</label>
-                <input type="file" name="file" id="file" style="width: 100%;" />
+                <input type="file" name="file" id="file"/>
                 <input type="submit" value="Upload" class="btn btn-default" />
             </form>
         </div>
@@ -57,11 +56,6 @@
                     <button asp-action="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                 }
                 <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-default">Save</button>
         </form>
