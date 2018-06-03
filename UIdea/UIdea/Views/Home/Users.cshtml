@@ -20,8 +20,8 @@
                         <div class="col-md-7" >
                             <div class="row" style="padding-top:20px">
                                 <div class="col-md-6">
-                                    <a asp-action="" asp-controller="">@user.UserName</a>
-
+                                    <a asp-action="UserProfile" asp-controller="Home" 
+                                       asp-route-id="@user.Id">@user.UserName</a>
                                 </div>
                                 <div class="col-md-6">
                                     <span class="label label-primary">XP:@user.XP</span>

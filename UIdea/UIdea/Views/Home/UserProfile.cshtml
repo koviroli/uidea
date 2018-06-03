@@ -1,0 +1,40 @@
+﻿@model ApplicationUser
+
+@{
+    ViewData["Title"] = Model.UserName;
+}
+
+<h2>@Model.UserName</h2>
+
+<div class="container" style="margin-top:50px">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
+                    <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
+                </object>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style="margin:10px">
+                <span class="label label-primary">Registered: @Model.DateRegistered</span>
+            </div>
+            <div style="margin:10px">
+                <span class="label label-primary">XP: @Model.XP</span>
+            </div>
+            <div style="margin:10px">
+                <span class="label label-primary">Projects: 6</span>
+            </div>
+            <div style="margin:10px">
+                <span class="label label-primary">Recommondations: 5</span>
+            </div>
+            <div style="margin:10px">
+                <a class="btn btn-default" role="button">apply</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
+

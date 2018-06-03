@@ -42,6 +42,21 @@ namespace UIdea.Controllers
             return View(await PaginatedList<ApplicationUser>.CreateAsync(users.AsNoTracking(), page ?? 1, pageSize));
         }
 
+        public async Task<IActionResult> UserProfile(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _appDbContext.Users.SingleOrDefaultAsync(u => u.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+        }
+
         public IActionResult Tags()
         {
             return View();
