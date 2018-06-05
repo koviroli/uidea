@@ -1,5 +1,4 @@
 ﻿@model UIdea.Models.Idea
-
 @inject SignInManager<ApplicationUser> SignInManager
 
 @using UIdea.Models
@@ -9,68 +8,178 @@
     ViewData["Title"] = Model.Title;
 }
 
-<object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
-    <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
-</object>
-<div class="row">
-    <div class="col-md-6" style="text-align:center">
-        <h2>@Html.DisplayFor(model => model.Title)</h2>
-        <h4>@Html.DisplayFor(model => model.Description)</h4>
-    </div>
-    <div class="col-md-6">
-        <dl class="dl-horizontal" style="margin-top:50px">
-            <dt>
-                <i class="fa fa-facebook-official" style="font-size:24px"></i>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.FacebookContact)
-            </dd>
-            <dt>
-                <i class="fa fa-instagram" style="font-size:24px"></i>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.InstagramContact)
-            </dd>
-            <dt>
-                <i class="fa fa-twitter-square" style="font-size:24px"></i>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.TwitterContact)
-            </dd>
-            <dt>
-                <i class="fa fa-github" style="font-size:24px"></i>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.GitHubContact)
-            </dd>
-            <dt>
-                <span class="glyphicon glyphicon-envelope" style="font-size:24px"></span>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.EmailContact)
-            </dd>
-            <dt>
-                <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.LinkedinContact)
-            </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.OtherContact)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.OtherContact)
-            </dd>
-        </dl>
+<h4>@Html.DisplayFor(model => model.Title)</h4>
+
+<ul class="nav nav-tabs" style="text-align: left; padding-top:20px">
+    <li class="active"><a href="#summary" data-toggle="tab" id="first_tab">Summary</a></li>
+    <li><a href="#issues" data-toggle="tab" id="second_tab">Issues</a></li>
+    <li><a href="#people" data-toggle="tab" id="third_tab">People</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="summary" class="tab-pane fade in active">
+        <h4>Summary of @Model.Title</h4>
+        <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
+            <img class="imgIdeaLogo" src="~/images/ideaavatar_default_lightbulb_128_128.jpg" width="224" height="224" />
+        </object>
+        <div class="row">
+            <div class="col-md-6" style="text-align:center">
+                <h2>@Html.DisplayFor(model => model.Title)</h2>
+                <h4>@Html.DisplayFor(model => model.Description)</h4>
+            </div>
+            <div class="col-md-6">
+                <dl class="dl-horizontal" style="margin-top:50px">
+                    <dt>
+                        <i class="fa fa-facebook-official" style="font-size:24px"></i>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.FacebookContact)
+                    </dd>
+                    <dt>
+                        <i class="fa fa-instagram" style="font-size:24px"></i>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.InstagramContact)
+                    </dd>
+                    <dt>
+                        <i class="fa fa-twitter-square" style="font-size:24px"></i>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.TwitterContact)
+                    </dd>
+                    <dt>
+                        <i class="fa fa-github" style="font-size:24px"></i>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.GitHubContact)
+                    </dd>
+                    <dt>
+                        <span class="glyphicon glyphicon-envelope" style="font-size:24px"></span>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.EmailContact)
+                    </dd>
+                    <dt>
+                        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LinkedinContact)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.OtherContact)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.OtherContact)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        @if (SignInManager.IsSignedIn(User) && User.GetUserId().Equals(Model.OwnerID))
+    {
+        <div>
+            <a class="btn btn-default" role="button" asp-action="Edit" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-edit"></span>Edit</a>
+            <a class="btn btn-default" role="button" asp-action="Delete" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-remove"></span> Delete</a>
+        </div>
+}
+    </div>
+    <div id="issues" class="tab-pane fade in">
+        <h4>Issues of @Model.Title</h4>
+        <p>Issues to be solved. Do it. Send merge request. Get the XP.</p>
+        <div class="container">
+            @if (SignInManager.IsSignedIn(User) && User.GetUserId().Equals(Model.OwnerID))
+            {
+            <div style="padding-bottom:20px">
+                <a class="btn btn-default" role="button" asp-action="" asp-route-id=""><span style="margin-right:5px" class="glyphicon glyphicon-edit"></span>Create</a>
+                <a class="btn btn-default" role="button" asp-action="" asp-route-id=""><span style="margin-right:5px" class="glyphicon glyphicon-wrench"></span>Settings</a>
+            </div>
+            }
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:4%">Type</th>
+                        <th style="width:40%">Title</th>
+                        <th>Description</th>
+                        <th style="width:6%">Reward</th>
+                        <th style="width:9%">Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-arrow-up" style="color:red;"></span></td>
+                        <td>Image upload Unhandled Exception</td>
+                        <td>While trying to upload image on IE, it is loading for a while, after it get Exce...</td>
+                        <td>50 XP</td>
+                        <td>05.may.2018</td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-arrow-down" style="color:green;"></span></td>
+                        <td>Registration e-mail doesn't arrive</td>
+                        <td>Registration form shows, e-mail have been sent, but I didn't get it</td>
+                        <td>25 XP</td>
+                        <td>05.may.2018</td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-arrow-down" style="color:green;"></span></td>
+                        <td>PNG convert to JPEG doesn't convert</td>
+                        <td>Cannot convert PNG to JPEG, but others are seemly work perfectly. If I try to...</td>
+                        <td>150 XP</td>
+                        <td>05.may.2018</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="people" class="tab-pane fade in">
+        <h4>Project members</h4>
+        <p>These members are participating in your project and they can start resolving issues in project.</p>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Joined</th>
+                        <th>Role</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>alaksa65</td>
+                        <td>28.jan.2018</td>
+                        <td>Leader</td>
+                        <td>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-remove" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MaryPoppins</td>
+                        <td>29.jan.2018</td>
+                        <td>Co-Leader</td>
+                        <td>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-remove" style="color:red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dunken007</td>
+                        <td>05.feb.2018</td>
+                        <td>Developer</td>
+                        <td>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-remove" style="color:red"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>
 
-@if (SignInManager.IsSignedIn(User) && User.GetUserId().Equals(Model.OwnerID))
-{
-    <div>
-        <a class="btn btn-default" role="button" asp-action="Edit" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-edit"></span>Edit</a> 
-        <a class="btn btn-default" role="button" asp-action="Delete" asp-route-id="@Model.ID"><span style="margin-right:5px" class="glyphicon glyphicon-remove"></span> Delete</a> 
-    </div>
-}
+
 

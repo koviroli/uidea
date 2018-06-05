@@ -7,3 +7,7 @@
 .userdiv:hover{
     background-color: rgba(247, 240, 240, 0.52);
 }
+
+.tab-content {
+    padding: 20px;
+}
