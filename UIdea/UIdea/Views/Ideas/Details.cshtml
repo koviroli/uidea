@@ -6,7 +6,7 @@
 @using UIdea.Extensions;
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = Model.Title;
 }
 
 <object class="imgIdeaLogo" data="data:image/png;base64,@Convert.ToBase64String(Model.AvatarImage)" width="224" height="224" type="image/png">
