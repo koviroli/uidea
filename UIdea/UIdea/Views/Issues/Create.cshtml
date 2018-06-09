@@ -1,0 +1,70 @@
+﻿@model UIdea.Models.Issue
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Issue</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProjectID" class="control-label"></label>
+                <input asp-for="ProjectID" class="form-control" />
+                <span asp-validation-for="ProjectID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssueType" class="control-label"></label>
+                <select asp-for="IssueType" class="form-control" asp-items="@Html.GetEnumSelectList(typeof(EIssueType))"></select> 
+                <span asp-validation-for="IssueType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <select asp-for="Priority" class="form-control" asp-items="@Html.GetEnumSelectList(typeof(EIssuePriority))"></select>
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Updated" class="control-label"></label>
+                <input asp-for="Updated" class="form-control" />
+                <span asp-validation-for="Updated" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="RewardType" class="control-label"></label>
+                <select asp-for="RewardType" class="form-control" asp-items="@Html.GetEnumSelectList(typeof(ERewardType))"></select>
+                <span asp-validation-for="RewardType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reward" class="control-label"></label>
+                <input asp-for="Reward" class="form-control" />
+                <span asp-validation-for="Reward" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
